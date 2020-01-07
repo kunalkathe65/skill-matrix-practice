@@ -1,7 +1,6 @@
 import math as m
 
 # FUNCTION DEFINITIONS
-# hello world
 
 def add(num1,num2):
     return num1 + num2
@@ -11,8 +10,6 @@ def substract(num1,num2):
 
 def multiply(num1,num2):
     return num1 * num2
-
-    
 
 def divide( num1,num2):
     return num1 / num2
@@ -90,6 +87,8 @@ elif choice == '2':
 
 elif choice == '3' :
 
+    number = float(input("Enter the number ==> "))
+
     print("----LOGARITHEMIC CALCULATIONS----")
     print("1. Natural Log")
     print("2. Log with base (2)")
@@ -97,8 +96,7 @@ elif choice == '3' :
     print("4. Log with desired base")
 
     choice = input("Enter the choice 1/2/3/4 ==> ")
-    number = float(input("Enter the number ==> "))
-
+   
     if choice == '1':
         print("The natural log is :",m.log(number))
     elif choice == '2':
