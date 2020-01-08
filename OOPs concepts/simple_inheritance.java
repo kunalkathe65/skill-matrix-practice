@@ -20,7 +20,7 @@ class RectangleParameters extends AreaOfRectangle{                 //SIMPLE INHE
     }
 
     public void calculatePerimeter(){                                                  
-        System.out.println("Perimeter of rectngle: "+ 2 * (length + breadth));
+        System.out.println("Perimeter of rectangle: "+ 2 * (length + breadth));
     }
 }
 
