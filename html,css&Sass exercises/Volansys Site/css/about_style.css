@@ -1,0 +1,41 @@
+body {
+  font-family: "Marmelad", sans-serif;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#first {
+  color: #0A3D62;
+  letter-spacing: 0.05cm;
+  text-align: justify;
+}
+
+h2 {
+  color: #0A3D62;
+  letter-spacing: 0.3cm;
+  text-align: center;
+}
+
+h3 {
+  text-align: center !important;
+  color: #0A3D62;
+  font-weight: lighter;
+}
+
+h4, p {
+  color: #0A3D62;
+}
+
+#second, #third {
+  letter-spacing: 0.05cm;
+}
+
+#bottom {
+  font-weight: lighter;
+  font-size: small;
+  letter-spacing: 0.5px;
+  color: #0A3D62;
+  text-align: center;
+}
+
+/*# sourceMappingURL=about_style.css.map */
