@@ -3,8 +3,26 @@ body{
     color: black;
 }
 
-nav{
-    background-color: #ffeaa7;
-    
+#mainlogo{
+    font-weight: bolder;
+    padding-top: 0%;
+    font-size: xx-large;
+    letter-spacing: 0.25cm;
+    color: #0A3D62;
 }
 
+h3,h6,h5{
+    text-align: center;
+    color: #0A3D62;
+    letter-spacing: 0.1cm;
+}
+
+h4{
+    letter-spacing: 0.4cm;
+    color: #0A3D62
+}
+
+label{
+    letter-spacing: 0.05cm;
+    color: #0A3D62;
+}
