@@ -26,3 +26,9 @@ label{
     letter-spacing: 0.05cm;
     color: #0A3D62;
 }
+
+#bottom{
+    font-size: small;
+    font-weight: lighter;
+    letter-spacing: 0.5px;
+}
