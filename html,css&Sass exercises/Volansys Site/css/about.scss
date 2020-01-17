@@ -1,0 +1,47 @@
+$font-stack: 'Marmelad', sans-serif;
+$primary-color: #0A3D62;
+$padding-leftside: 10px;
+$padding-rightside: 10px;
+$para-letter-spacing:0.05cm;
+
+body{
+    font-family: $font-stack;
+    padding-left: $padding-leftside;
+    padding-right: $padding-rightside;
+}
+
+#first{
+    color: $primary-color;
+    letter-spacing: $para-letter-spacing;
+    text-align: justify;
+
+}
+
+h2{
+    color: $primary-color;
+    letter-spacing: 0.3cm;
+    text-align: center;
+}
+
+h3{
+    text-align: center !important;
+    color: $primary-color;
+    font-weight: lighter;
+}
+
+h4,p{
+    color: $primary-color;
+}
+
+
+#second,#third{
+    letter-spacing: $para-letter-spacing;
+}
+
+#bottom{
+    font-weight: lighter;
+    font-size: small;
+    letter-spacing: 0.5px;
+    color: $primary-color;
+    text-align: center;
+}
