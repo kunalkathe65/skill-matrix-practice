@@ -1,0 +1,16 @@
+{
+  "name": "mocha-chai-sinon",
+  "version": "1.0.0",
+  "description": "NodeJS unit & integration testing",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kunal Kathe",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.0.1",
+    "sinon": "^9.0.2"
+  }
+}
