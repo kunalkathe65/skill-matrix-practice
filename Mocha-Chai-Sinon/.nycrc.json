@@ -1,0 +1,8 @@
+{
+  "nyc": {
+    "include": "src",
+    "exclude": "spec",
+    "check-coverage": true,
+    "lines": 60
+  }
+}
