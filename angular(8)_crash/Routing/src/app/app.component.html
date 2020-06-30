@@ -1,0 +1,11 @@
+<ul>
+  <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+    <a routerLink="/">Home</a>
+  </li>
+  <li routerLinkActive="active">
+    <a [routerLink]="['/users', 'kunal']">User</a>
+  </li>
+  <li routerLinkActive="active"><a routerLink="/servers">Servers</a></li>
+</ul>
+
+<router-outlet></router-outlet>
