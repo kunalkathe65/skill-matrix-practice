@@ -1,0 +1,49 @@
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+  <div formGroupName="userData">
+    <input type="text" formControlName="username" />
+    <span
+      *ngIf="
+        !signupForm.get('userData.username').valid &&
+        signupForm.get('userData.username').touched
+      "
+    >
+      <span *ngIf="signupForm.get('userData.username').errors.nameIsForbidden"
+        >Invalid username!!</span
+      >
+      <span *ngIf="signupForm.get('userData.username').errors.required"
+        >Username is required!!</span
+      >
+    </span>
+    <input type="email" formControlName="email" />
+    <span
+      *ngIf="
+        !signupForm.get('userData.email').valid &&
+        signupForm.get('userData.email').touched
+      "
+    >
+      <span *ngIf="signupForm.get('userData.email').errors.emailIsForbidden"
+        >Invalid email!!</span
+      >
+      <span *ngIf="signupForm.get('userData.email').errors.required"
+        >Email is required!!</span
+      >
+    </span>
+  </div>
+  <div formArrayName="hobbies">
+    <h4>Your Hobbies:</h4>
+    <button type="button" (click)="onAddHobby()">Add Hobby</button>
+    <div
+      *ngFor="
+        let hobbyControl of signupForm.get('hobbies').controls;
+        let i = index
+      "
+    >
+      <input type="text" [formControlName]="i" />
+      <button type="button" (click)="onRemoveHobby(i)">X</button>
+    </div>
+  </div>
+
+  <input type="radio" formControlName="gender" value="male" />Male
+  <input type="radio" formControlName="gender" value="female" />Female
+  <button type="submit">Submit</button>
+</form>

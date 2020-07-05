@@ -1,0 +1,73 @@
+<!-- <form (ngSubmit)="onSubmit()" #loginForm="ngForm">  (FOR @VIEWCHILD) -->
+<form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+  <div ngModelGroup="userData" #userData="ngModelGroup">
+    <input
+      type="email"
+      placeholder="Email address"
+      name="email"
+      ngModel
+      #email="ngModel"
+      required
+      email
+    />
+    <span *ngIf="!email.valid && email.touched"
+      >Please enter a valid email!</span
+    >
+    <!-- <select name="colors" [ngModel]="defaultColor"> -->
+    <select name="color" ngModel>
+      <option value="" disabled>Select Color</option>
+      <option value="Blue">Blue</option>
+      <option value="Red">Red</option>
+      <option value="Purple">Purple</option>
+    </select>
+    <input
+      type="password"
+      placeholder="Password"
+      name="password_1"
+      ngModel
+      #password_1="ngModel"
+      required
+    />
+    <input type="radio" name="gender" ngModel value="male" />Male
+    <input type="radio" name="gender" ngModel value="female" />Female
+    <input type="checkbox" name="painting" ngModel />Painting
+    <input type="checkbox" name="dancing" ngModel />Dancing
+    <input type="checkbox" name="singing" ngModel />Singing
+    <input
+      type="password"
+      placeholder="Confirm Password"
+      name="password_2"
+      #password_2="ngModel"
+      ngModel
+      required
+    />
+    <input type="text" name="city" [ngModel]="'Vapi'" />
+    <input
+      type="text"
+      placeholder="Enter Answer"
+      name="answer"
+      [(ngModel)]="answer"
+      required
+    />
+    <p>Your answer : {{ answer }}</p>
+    <span *ngIf="!password_1.valid && password_1.touched"
+      >Please enter a valid password!</span
+    >
+    <span *ngIf="!password_2.valid && password_2.touched"
+      >Please comfirm password!</span
+    >
+    <span style="color: red;" *ngIf="password_1.value !== password_2.value"
+      >Passwords don't match!!</span
+    >
+    <button [disabled]="!loginForm.valid" type="submit">Submit</button>
+    <p *ngIf="!userData.valid && userData.touched">User data not valid!!</p>
+  </div>
+</form>
+<button type="button" (click)="onPatchGender()">Patch Gender</button>
+<a routerLink="/reactive">To Reactive Form</a>
+<hr />
+<hr />
+
+<div>
+  <router-outlet></router-outlet>
+</div>
